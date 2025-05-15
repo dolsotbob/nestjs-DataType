@@ -149,8 +149,8 @@ describe('DatatypeService', () => {
 
   it('getDetails 실행 시 bigint 타입이 문자열로 변환되어야 합니다.', async () => {
     const result = await service.getDetails();
-    expect(result['0']).toBe('100');
-    expect(result['1']).toBe('-50');
-    expect(result['3']).toBe('0xWallet');
+    expect(result?.['0']).toBe('100');
+    expect(result?.['1']).toBe('-50');
+    expect(result?.['3']).toBe('0xWallet');
   });
 });
